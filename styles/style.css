@@ -1,0 +1,38 @@
+
+main {
+  max-width: 1400px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+#app-contents {
+  display: flex;
+  height: 90%;  
+}
+
+#search-history {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 90%;
+}
+
+#output-info {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 90%;
+}
+
+#today {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+}
+
+#week-look {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+}
