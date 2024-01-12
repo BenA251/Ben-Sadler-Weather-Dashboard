@@ -16,6 +16,32 @@ $("#fifthDate").text(fifthDate.format("DD/MM/YYYY"));
 $("#sixthDate").text(sixthDate.format("DD/MM/YYYY"));
 
 
+//script for accessing API
+
+const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
+
+
+  $("#search-button").on("click", function (e) {
+    e.preventDefault();
+    
+    const searchValue = $("#search-field").val().trim();
+  
+   const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${APIKey}`;
+
+    fetch(queryURL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+  
+      })
+  
+    });
+
+
+
+
 
 
 
