@@ -64,6 +64,14 @@ main {
   border: solid rgb(120, 146, 231) 2px;
 }
 
+#today-heading {
+  display: flex;
+}
+
+
+
+
+
 #week-look {
   display: flex;
   flex-direction: column;
