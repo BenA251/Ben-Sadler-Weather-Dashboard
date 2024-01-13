@@ -80,7 +80,7 @@ const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
   
 
 //script for icon updates
-
+//can set attribute background source to URL of image according to code in API.
 
 
 
