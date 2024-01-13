@@ -38,7 +38,6 @@ const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
     $("#day1temp").text(data.main.temp);
     $("#day1wind").text(((data.wind.speed)*3.6).toPrecision(2));
     $("#day1humidity").text(data.main.humidity);
-    console.log(data)
   
       })
         
@@ -58,16 +57,33 @@ const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
       .then(function (response) {
         return response.json();
       })
-      .then(function (data) {
-      console.log(data)
-
+      .then(function (data) {  
+        $("#day2temp").text(data.list[7].main.temp);
+        $("#day2wind").text(((data.list[7].wind.speed)*3.6).toPrecision(2));
+        $("#day2humidity").text(data.list[7].main.humidity);
+        $("#day3temp").text(data.list[15].main.temp);
+        $("#day3wind").text(((data.list[15].wind.speed)*3.6).toPrecision(2));
+        $("#day3humidity").text(data.list[15].main.humidity);
+        $("#day4temp").text(data.list[23].main.temp);
+        $("#day4wind").text(((data.list[23].wind.speed)*3.6).toPrecision(2));
+        $("#day4humidity").text(data.list[23].main.humidity);
+        $("#day5temp").text(data.list[31].main.temp);
+        $("#day5wind").text(((data.list[31].wind.speed)*3.6).toPrecision(2));
+        $("#day5humidity").text(data.list[31].main.humidity);
+        $("#day6temp").text(data.list[39].main.temp);
+        $("#day6wind").text(((data.list[39].wind.speed)*3.6).toPrecision(2));
+        $("#day6humidity").text(data.list[39].main.humidity);
         })
       
       
       });
   
-  
-  
+
+//script for icon updates
+
+
+
+
 
     //script for saving previous searches to local storage and updating previous search history.
 
