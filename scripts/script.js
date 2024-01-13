@@ -20,28 +20,56 @@ $("#sixthDate").text(sixthDate.format("DD/MM/YYYY"));
 const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
 
 
-  $("#search-button").on("click", function (e) {
+//script for accessing and displaying current day info.
+
+ $("#search-button").on("click", function (e) {
     e.preventDefault();
     
-    const searchValue = $("#search-field").val().trim();
+  const searchValue = $("#search-field").val().trim();
   
-   const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${APIKey}&units=metric`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${APIKey}&units=metric`;
 
     fetch(queryURL)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      $("#currentCity").text(data.name + " " + today.format("DD/MM/YYYY"));
-      $("#day1temp").text(data.main.temp);
-      $("#day1wind").text(((data.wind.speed)*3.6).toPrecision(2));
-      $("#day1humidity").text(data.main.humidity);
-      console.log(data)
-      })
+    $("#currentCity").text(data.name + " " + today.format("DD/MM/YYYY"));
+    $("#day1temp").text(data.main.temp);
+    $("#day1wind").text(((data.wind.speed)*3.6).toPrecision(2));
+    $("#day1humidity").text(data.main.humidity);
+    console.log(data)
   
+      })
+        
     });
 
 
+    //script for accessing and displaying next 5 - day data (not including today)
+
+    $("#search-button").on("click", function (e) {
+      e.preventDefault();
+      
+    const searchValue = $("#search-field").val().trim();
+    
+    const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=${APIKey}&units=metric`;
+  
+      fetch(queryURL)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+      console.log(data)
+
+        })
+      
+      
+      });
+  
+  
+  
+
+    //script for saving previous searches to local storage and updating previous search history.
 
 
 
