@@ -73,7 +73,8 @@ const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
         $("#day6temp").text(data.list[39].main.temp);
         $("#day6wind").text(((data.list[39].wind.speed)*3.6).toPrecision(2));
         $("#day6humidity").text(data.list[39].main.humidity);
-        })
+      })
+        
       
       
       });
