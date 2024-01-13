@@ -149,7 +149,6 @@ img {
 
 
 .tst {
-  background-image: url("https://openweathermap.org/img/wn/10d@2x.png");
   background-size: contain;
   height: 45px;
   width: 45px;

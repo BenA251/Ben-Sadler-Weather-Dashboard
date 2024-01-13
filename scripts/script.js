@@ -38,11 +38,10 @@ const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
     $("#day1temp").text(data.main.temp);
     $("#day1wind").text(((data.wind.speed)*3.6).toPrecision(2));
     $("#day1humidity").text(data.main.humidity);
-  
+    $("#iconday1").css({"background-image":`url(https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png)`});
       })
         
     });
-
 
     //script for accessing and displaying next 5 - day data (not including today)
 
@@ -61,42 +60,28 @@ const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
         $("#day2temp").text(data.list[7].main.temp);
         $("#day2wind").text(((data.list[7].wind.speed)*3.6).toPrecision(2));
         $("#day2humidity").text(data.list[7].main.humidity);
+        $("#iconday2").css({"background-image":`url(https://openweathermap.org/img/wn/${data.list[7].weather[0].icon}@2x.png)`});
         $("#day3temp").text(data.list[15].main.temp);
         $("#day3wind").text(((data.list[15].wind.speed)*3.6).toPrecision(2));
         $("#day3humidity").text(data.list[15].main.humidity);
+        $("#iconday3").css({"background-image":`url(https://openweathermap.org/img/wn/${data.list[15].weather[0].icon}@2x.png)`});
         $("#day4temp").text(data.list[23].main.temp);
         $("#day4wind").text(((data.list[23].wind.speed)*3.6).toPrecision(2));
         $("#day4humidity").text(data.list[23].main.humidity);
+        $("#iconday4").css({"background-image":`url(https://openweathermap.org/img/wn/${data.list[23].weather[0].icon}@2x.png)`});
         $("#day5temp").text(data.list[31].main.temp);
         $("#day5wind").text(((data.list[31].wind.speed)*3.6).toPrecision(2));
         $("#day5humidity").text(data.list[31].main.humidity);
+        $("#iconday5").css({"background-image":`url(https://openweathermap.org/img/wn/${data.list[31].weather[0].icon}@2x.png)`});
         $("#day6temp").text(data.list[39].main.temp);
         $("#day6wind").text(((data.list[39].wind.speed)*3.6).toPrecision(2));
         $("#day6humidity").text(data.list[39].main.humidity);
+        $("#iconday6").css({"background-image":`url(https://openweathermap.org/img/wn/${data.list[39].weather[0].icon}@2x.png)`});
       })
-        
-      
-      
+              
       });
   
-
-//script for icon updates
-//can set attribute background source to URL of image according to code in API.
-
-
-
-
     //script for saving previous searches to local storage and updating previous search history.
 
 
 
-
-
-//when search using search button it passes value to fetch function which then interacts with API to retrieve data before updating html using jquery.
-
-//when search is pressed the past search buttons are populated, when past search is pressed it also calls function same as search button which runs function but instead passes value of name in field.
-
-
-//where do I get the future day look ahead
-
-//where do I get the images from, 
