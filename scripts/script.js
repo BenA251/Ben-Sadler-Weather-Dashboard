@@ -95,7 +95,7 @@ const APIKey = "c27b6f158393dd9e97b1661d03e463b8";
 
 function pageFunction() {
   counterValue = localStorage.getItem("count");
-  console.log(counterValue)
+  getLocalStorage();
 }
 
 //this function shall run in side click event function once new search made.
@@ -129,7 +129,7 @@ function setLocal(Search) {
 function getLocalStorage() {
   for (let i = 0; i < searchIdArr.length; i++) {
   var inputContent = localStorage.getItem(searchIdArr[i]);
-  $("#"+ searchIdArr[i]).attr('value', inputContent)
+  $("#"+ searchIdArr[i]).html(inputContent);
     }
     }
      
