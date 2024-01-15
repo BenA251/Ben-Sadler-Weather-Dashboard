@@ -139,6 +139,3 @@ function getLocalStorage() {
 
 
 //function for populating all previous search results runs at page refresh and once new value added.
-
-
-
