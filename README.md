@@ -41,15 +41,6 @@ Website: https://bena251.github.io/Ben-Sadler-Weather-Dashboard/ <br>
 Website Repository: https://github.com/BenA251/Ben-Sadler-Weather-Dashboard
 
 
-## Usage 
-
-
-
-<strong>Screenshot:</strong> <br>
-
-![alt text](./images/Screenshot.png)
-
-
 ## Credits
 
 Challenge/Project Material was provided by course. 
